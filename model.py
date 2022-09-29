@@ -1,22 +1,46 @@
 class Film:
     def __init__(self, name, year, duration):
-        self.name = name.title()
+        self.__name = name.title()
         self.year = year
         self.duration = duration
-        self.likes = 0
+        self.__likes = 0
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name.title()
+
+    @property
+    def likes(self):
+        return self.__likes
 
     def send_like(self):
-        self.likes += 1
+        self.__likes += 1
 
 class TVShow:
     def __init__(self, name, year, seasons):
-        self.name = name.title()
+        self.__name = name.title()
         self.year = year
         self.seasons = seasons
-        self.likes = 0
+        self.__likes = 0
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name.title()
+
+    @property
+    def likes(self):
+        return self.__likes
 
     def send_like(self):
-        self.likes += 1
+        self.__likes += 1
 
 avengers = Film('Avengers - infinity war', 2018, 160)
 avengers.send_like()
