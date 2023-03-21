@@ -21,17 +21,13 @@ class Show:
 
 class Film(Show):
     def __init__(self, name, year, duration):
-        self._name = name.title()
-        self.year = year
+        super().__init__(name, year)
         self.duration = duration
-        self._likes = 0
 
-class TVShow(Show ):
+class TVShow(Show):
     def __init__(self, name, year, seasons):
-        self._name = name.title()
-        self.year = year
+        super().__init__(name, year)
         self.seasons = seasons
-        self._likes = 0
 
 avengers = Film('Avengers - infinity war', 2018, 160)
 avengers.send_like()
