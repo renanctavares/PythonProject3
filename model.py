@@ -33,11 +33,13 @@ avengers = Film('Avengers - infinity war', 2018, 160)
 avengers.send_like()
 avengers.send_like()
 
-print(f'{avengers.name} - {avengers.year} - {avengers.likes}')
-
 atlanta = TVShow('Atlanta', 2018, 2)
 atlanta.send_like()
 atlanta.send_like()
 
-print(f'{atlanta.name} - {atlanta.year} - {atlanta.likes}')
 
+films_and_tvshows = [avengers, atlanta]
+
+for show in films_and_tvshows:
+    details = show.duration if hasattr(show, 'duration') else show.seasons
+    print(f'{show.name} - {show.year} - {details} - {show.likes}')
