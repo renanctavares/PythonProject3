@@ -33,11 +33,11 @@ avengers = Film('Avengers - infinity war', 2018, 160)
 avengers.send_like()
 avengers.send_like()
 
-print(f'Name: {avengers.name} - Year: {avengers.year} - Duration: {avengers.duration} - Likes: {avengers.likes}')
+print(f'{avengers.name} - {avengers.year} - {avengers.likes}')
 
 atlanta = TVShow('Atlanta', 2018, 2)
 atlanta.send_like()
 atlanta.send_like()
 
-print(f'Name: {atlanta.name} - Year: {atlanta.year} - Seasons: {atlanta.seasons} - Likes: {atlanta.likes}')
+print(f'{atlanta.name} - {atlanta.year} - {atlanta.likes}')
 
